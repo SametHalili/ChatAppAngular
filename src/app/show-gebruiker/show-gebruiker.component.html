@@ -1,0 +1,19 @@
+<div *ngIf="gebruiker">
+  <h2>{{ gebruiker.userId }} Details</h2>
+  <p>Verander de naam en voornaam van het gebruiker</p>
+  <div>
+    <label>Voornaam:
+      <input [(ngModel)]="gebruiker.firstName" placeholder="voornaam"/>
+    </label>
+    <label>Naam:
+      <input [(ngModel)]="gebruiker.lastName" placeholder="naam"/>
+    </label>
+  </div>
+  <button class="btn waves-effect waves-light"(click)="goBack()">
+    <i class="material-icons left">keyboard_backspace</i>
+    Go back
+  </button>
+  <button class="btn waves-effect waves-light"(click)="save()"> Save
+    <i class="material-icons right">send</i>
+  </button>
+</div>

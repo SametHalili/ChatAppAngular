@@ -1,4 +1,8 @@
-# ChatAppAngular
+
+# Webontwikkeling 4: ChatAppAngular
+This is the second part of a homework for school.  First part is [here](https://github.com/SametHalili/ChatApp).
+This is a simple Angular website that allows you to edit some user info from the server of the first part of the homework. 
+For this to work properly you need to launch the first part of the home first.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.1.
 

@@ -1,0 +1,21 @@
+<div class="row">
+  <h2 class="header">Gebruikers</h2>
+  <div class="col s6" *ngFor="let gebruiker of gebruikers">
+    <div class="card horizontal">
+      <div class="card-stacked">
+        <div class="card-content">
+          <h5>Usernaam: {{gebruiker.userId}}</h5>
+          <p>Voornaam: {{gebruiker.firstName}}</p>
+          <p>Naam: {{gebruiker.lastName}}</p>
+          <p>Email: {{gebruiker.email}}</p>
+          <p>Geslacht: {{gebruiker.geslacht}}</p>
+          <p>Leeftijd: {{gebruiker.leeftijd}} jaar</p>
+        </div>
+        <div class="card-action">
+          <a routerLink="/gebruiker/{{gebruiker.userId}}">Gebruiker instellen</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
