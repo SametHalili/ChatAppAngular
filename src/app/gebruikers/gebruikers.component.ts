@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {GebruikerService} from '../gebruiker.service';
 import {Gebruiker} from '../gebruiker';
+import { timer } from 'rxjs';
 
 @Component({
   selector: 'app-gebruikers',
@@ -18,10 +19,11 @@ export class GebruikersComponent implements OnInit {
 
 
   getGebruikers(): void {
-    this.gebruikerService.getGebruikers()
-      .subscribe(
-        gebruikers => this.gebruikers = gebruikers,
-        err => console.error(err),
-        () => console.log('done loading json'));
+    timer(0, 2500)
+      .subscribe(() => this.gebruikerService.getGebruikers()
+        .subscribe(
+          gebruikers => this.gebruikers = gebruikers,
+          err => console.error(err),
+          () => console.log('done loading json')));
   }
 }
